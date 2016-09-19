@@ -71,6 +71,7 @@
 		91ED5B067FCA3CBD48E3114672941051 /* MatcherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AB1BAD47A10C907BF0EFC292701EA9 /* MatcherProtocols.swift */; };
 		94424C38D64693AE314668F5BE29DA21 /* SuiteHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFF76364EB5CF3B70D657CAB2B5DAE2 /* SuiteHooks.swift */; };
 		9510C57B1D8FFCC300472027 /* Tome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510C57A1D8FFCC300472027 /* Tome.swift */; };
+		9510C57F1D9005F900472027 /* WordCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510C57E1D9005F900472027 /* WordCategory.swift */; };
 		96B20417B9C570034E72022A8138B8FA /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F886A4BE73DD775F328C5C707A30907 /* Filter.swift */; };
 		96ED0CCA721955637A88FE0C9737EC56 /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E493AFEDDF65CC7F08926652F2AA9DE /* SourceLocation.swift */; };
 		9B5DE58927557CE87968C051D2A1C47E /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A83C972DB604D68F9136B93A823BF28 /* BeLogical.swift */; };
@@ -224,6 +225,7 @@
 		91F9A34FE9FD2E24571630A4FA0E3E4F /* Contain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contain.swift; path = Sources/Nimble/Matchers/Contain.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9510C57A1D8FFCC300472027 /* Tome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tome.swift; sourceTree = "<group>"; };
+		9510C57E1D9005F900472027 /* WordCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCategory.swift; sourceTree = "<group>"; };
 		96EA5A327EECB46C637BDC84A4B1B945 /* NimbleXCTestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleXCTestHandler.swift; path = Sources/Nimble/Adapters/NimbleXCTestHandler.swift; sourceTree = "<group>"; };
 		9A0316CCB16C87920CA154F9C5756D5D /* Pods-ArcanaSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ArcanaSwift_Tests.modulemap"; sourceTree = "<group>"; };
 		9AEAAB26408020DC08E2C54093E19B25 /* BeAKindOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAKindOf.swift; path = Sources/Nimble/Matchers/BeAKindOf.swift; sourceTree = "<group>"; };
@@ -583,6 +585,7 @@
 			isa = PBXGroup;
 			children = (
 				9510C57A1D8FFCC300472027 /* Tome.swift */,
+				9510C57E1D9005F900472027 /* WordCategory.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -874,6 +877,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9510C57B1D8FFCC300472027 /* Tome.swift in Sources */,
+				9510C57F1D9005F900472027 /* WordCategory.swift in Sources */,
 				C78A8E7EBF2E4DB86D7C09CA93228FEC /* ArcanaSwift-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
