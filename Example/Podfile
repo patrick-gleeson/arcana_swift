@@ -1,0 +1,8 @@
+use_frameworks!
+target 'ArcanaSwift_Tests' do
+  pod 'ArcanaSwift', :path => '../'
+  
+  pod 'Quick', '~> 0.8'
+  pod 'Nimble', '~> 3.0'
+  pod 'ThinginessSwift', :git => 'https://github.com/patrick-gleeson/thinginess_swift.git'
+end
