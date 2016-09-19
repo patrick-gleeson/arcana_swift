@@ -1,0 +1,22 @@
+{
+  "name": "ThinginessSwift",
+  "version": "0.1.0",
+  "summary": "A short description of ThinginessSwift.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/ThinginessSwift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Patrick Gleeson": "patrick.c.gleeson@googlemail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/ThinginessSwift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ThinginessSwift/Classes/**/*"
+}

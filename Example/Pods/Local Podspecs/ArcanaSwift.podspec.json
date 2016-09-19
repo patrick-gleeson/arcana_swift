@@ -9,7 +9,7 @@
     "file": "LICENSE"
   },
   "authors": {
-    "Patrick Gleeson": "hell@boffinism.com"
+    "Patrick Gleeson": "hello@boffinism.com"
   },
   "source": {
     "git": "https://github.com/<GITHUB_USERNAME>/ArcanaSwift.git",
@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "ArcanaSwift/Classes/**/*"
+  "source_files": "ArcanaSwift/Classes/**/*",
+  "dependencies": {
+    "ThinginessSwift": [
+
+    ]
+  }
 }
