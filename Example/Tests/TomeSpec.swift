@@ -3,7 +3,6 @@
 //  ArcanaSwift
 //
 //  Created by Patrick Gleeson on 19/09/2016.
-//  Copyright © 2016 CocoaPods. All rights reserved.
 //
 
 import Quick

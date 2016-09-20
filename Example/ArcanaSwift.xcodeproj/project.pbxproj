@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		26A58504D6E0BD2588A15132 /* Pods_ArcanaSwift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5DF9D24805EDD8ABFA24BB /* Pods_ArcanaSwift_Tests.framework */; };
 		9510C57D1D9003A900472027 /* TomeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510C57C1D9003A900472027 /* TomeSpec.swift */; };
+		95ED29321D91903A00610BDE /* DemonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ED29311D91903A00610BDE /* DemonSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		607FACE51AFB9204008FA782 /* ArcanaSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArcanaSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9510C57C1D9003A900472027 /* TomeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TomeSpec.swift; sourceTree = "<group>"; };
+		95ED29311D91903A00610BDE /* DemonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemonSpec.swift; sourceTree = "<group>"; };
 		AF3EAB9DB18F1B661BD8B88D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		EC6EA076BB699F66184481B5 /* Pods-ArcanaSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanaSwift_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArcanaSwift_Tests/Pods-ArcanaSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 			children = (
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 				9510C57C1D9003A900472027 /* TomeSpec.swift */,
+				95ED29311D91903A00610BDE /* DemonSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95ED29321D91903A00610BDE /* DemonSpec.swift in Sources */,
 				9510C57D1D9003A900472027 /* TomeSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
