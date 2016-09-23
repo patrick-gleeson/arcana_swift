@@ -16,18 +16,18 @@ class Tree : BaseThing {
 
 class TreeLore: Tome {
     override func registerWords() {
-        typeWords["arboria"] = {
+        typeWords["arboria"] = (description: "All the trees", action: {
             return ThingRegistry.sharedInstance.thingsOfType("Tree")
-        }
-        selectorWords["minimis"] = { (initialSet) -> ThingSet in
+        })
+        selectorWords["minimis"] = (description: "All the trees", action: { (initialSet) -> ThingSet in
             return initialSet.matching(["size":"small"])
-        }
-        actionWords["gorgal"] = { (initialSet, refinements) -> () in
+        })
+        actionWords["gorgal"] = (description: "All the trees", action: { (initialSet, refinements) -> () in
             if let sizeModifier = refinements["size"] {
                 initialSet.updateAll(["size":sizeModifier])
             }
-        }
-        refinementWords["grandis"] = ["size":"large"]
+        })
+        refinementWords["grandis"] = (description: "All the trees", action: ["size":"large"])
     }
 }
 

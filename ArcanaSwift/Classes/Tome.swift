@@ -14,26 +14,47 @@ public class Tome  {
     }
 
     public func invokeTypeWord(word: String) -> ThingSet {
-        let wordEffect = typeWords[word]
-        return wordEffect!()
+        let wordEffect = typeWords[word]!.action
+        return wordEffect()
     }
 
     public func invokeSelectorWord(word: String, onThingSet: ThingSet) -> ThingSet {
-        let wordEffect = selectorWords[word]
-        return wordEffect!(onThingSet)
+        let wordEffect = selectorWords[word]!.action
+        return wordEffect(onThingSet)
     }
 
     public func invokeActionWord(word: String, onThingSet: ThingSet, withRefinements: [String: String]) {
-        let wordEffect = actionWords[word]
-        wordEffect!(onThingSet, withRefinements)
+        let wordEffect = actionWords[word]!.action
+        wordEffect(onThingSet, withRefinements)
     }
 
     public func invokeRefinementWord(word: String) -> [String:String] {
-        return refinementWords[word]!
+        return refinementWords[word]!.action
     }
 
     public func registerWords() {
         preconditionFailure("You must override registerWords with assignments to typeWords, selectorWords, actionWords and refinementWords")
+    }
+
+    public func name()-> String {
+        return String(Mirror(reflecting: self).subjectType)
+    }
+
+    public func definitions() -> [WordData] {
+        var ret = [WordData]()
+        typeWords.forEach { (key, tuple) in
+            ret.append(WordData(category: .type, word: key, tome: self, description: tuple.description))
+        }
+        selectorWords.forEach { (key, tuple) in
+            ret.append(WordData(category: .selector, word: key, tome: self, description: tuple.description))
+        }
+        actionWords.forEach { (key, tuple) in
+            ret.append(WordData(category: .action, word: key, tome: self, description: tuple.description))
+        }
+        refinementWords.forEach { (key, tuple) in
+            ret.append(WordData(category: .refinement, word: key, tome: self, description: tuple.description))
+        }
+        return ret
     }
 
     public func getCategoryOf(word: String) -> WordCategory? {
@@ -50,9 +71,9 @@ public class Tome  {
         }
     }
 
-    public var typeWords: [String : ()->ThingSet] = [:]
-    public var selectorWords: [String : (ThingSet)->ThingSet] = [:]
-    public var actionWords: [String : (ThingSet, [String:String])->()] = [:]
-    public var refinementWords: [String : [String: String]] = [:]
+    public var typeWords: [String : (action:()->ThingSet, description: String)] = [:]
+    public var selectorWords: [String : (action:(ThingSet)->ThingSet, description: String)] = [:]
+    public var actionWords: [String : (action:(ThingSet, [String:String])->(), description: String)] = [:]
+    public var refinementWords: [String : (action:[String: String], description: String)] = [:]
 
 }

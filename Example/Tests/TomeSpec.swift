@@ -17,18 +17,21 @@ class TestTome: Tome {
     var thingSet = ThingSet(things: [])
 
     override func registerWords() {
-        typeWords["foo"] = {
+        typeWords["foo"] = (action: {
             self.fooHasBeenInvoked = true
             return self.thingSet
-        }
-        selectorWords["bar"] = { (initialSet) -> ThingSet in
+            }, description: "do the fooey thing")
+
+        selectorWords["bar"] = (action: { (initialSet) -> ThingSet in
             self.barHasBeenInvoked = true
             return self.thingSet
-        }
-        actionWords["har"] = { (initialSet, refinements) -> () in
+        }, description: "bar")
+
+        actionWords["har"] = (action: { (initialSet, refinements) -> () in
             self.harHasBeenInvoked = true
-        }
-        refinementWords["mar"] = ["hoo":"har"]
+        }, description: "har")
+
+        refinementWords["mar"] = (action: ["hoo":"har"], description: "mar")
     }
 }
 
@@ -72,6 +75,28 @@ class TomeSpec: QuickSpec {
                 let testTome = TestTome()
                 let result = testTome.getCategoryOf("far")
                 expect(result).to(beNil())
+            }
+        }
+        describe("name") {
+            it("returns the name of the class") {
+                let testTome = TestTome()
+                expect(testTome.name()).to(equal("TestTome"))
+            }
+        }
+        describe("definitions") {
+            it("returns a definition for each registered word") {
+                let testTome = TestTome()
+                expect(testTome.definitions().count).to(equal(4))
+            }
+
+            it("returns the name of each word") {
+                let testTome = TestTome()
+                expect(testTome.definitions()[0].word).to(equal("foo"))
+            }
+
+            it("returns the description of each word") {
+                let testTome = TestTome()
+                expect(testTome.definitions()[0].description).to(equal("do the fooey thing"))
             }
         }
 
